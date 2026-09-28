@@ -36,6 +36,7 @@ const CONTENT = {
     { label: "方向兴趣", value: "人工智能 / 游戏开发 / 嵌入式与机器人" },
     { label: "开发工具", value: "ClaudeCode · Codex · DeepSeekHarness" },
     { label: "邮箱", value: "2160634966@qq.com" },
+    { label: "在线作品", value: "三个网站已上线(含多 AI 交互系统)" },
     { label: "语言", value: "中文 / English" },
     { label: "户外", value: "5000m+ 技术型雪山 · 攀冰 · 百公里骑行" }
   ],
@@ -51,7 +52,7 @@ const CONTENT = {
     { name: "C++ / C(NOIP 培训 · Godot 3)", level: 82 },
     { name: "Python", level: 80 },
     { name: "Transformer 架构与论文阅读", level: 78 },
-    { name: "Git / GitHub 开源协作", level: 78 },
+    { name: "Git / GitHub 开源协作", level: 80 },
     { name: "游戏开发(Godot 3 · 独立游戏)", level: 72 },
     { name: "无人机改造与调试", level: 70 }
   ],
@@ -81,7 +82,7 @@ const CONTENT = {
     {
       period: "中学 · 自学",
       title: "自学 Python 与 HTML,发布个人网站",
-      desc: "自学 Python 和 HTML,并陆续发布个人网站(共三个,链接见「作品」)。",
+      desc: "自学 Python 和 HTML,并陆续发布个人网站(共三个,含多 AI 交互系统,链接见「作品」)。",
       tags: ["Python", "HTML", "个人网站"]
     },
     {
@@ -135,6 +136,13 @@ const CONTENT = {
       link: "https://github.com/RazorEdge-wyh/one-shot-godot"
     },
     {
+      title: "多 AI 交互系统 · AImeetingPROJECT",
+      desc: "基于 Python + Streamlit 的可视化多 AI 交互系统,包含辩论、阶梯式递进讨论、方案评审、头脑风暴,甚至狼人杀在内的 7 种会议模式。由我独立开发并部署上线,永久免费开源。提示:免费版 Streamlit 空闲后会休眠,首次打开请点一下「Yes, get this app back up!」等约 30 秒唤醒。",
+      tags: ["Python", "Streamlit", "多 AI 交互", "已上线", "开源"],
+      image: "",
+      link: "https://aimeetinguipy-buikwpsprif94b8nufhrd4.streamlit.app/"
+    },
+    {
       title: "Arduino 超声波雷达",
       desc: "自学 Arduino,参照开源教程加装超声波传感器,独立完成一个简易雷达(测距 + 扫描显示)。",
       tags: ["Arduino", "HC-SR04", "开源教程", "硬件"],
@@ -150,14 +158,14 @@ const CONTENT = {
     },
     {
       title: "个人网站(三个)",
-      desc: "自学 HTML 后陆续发布的个人网站,当前这个创新班作品展示站也是其中之一。",
-      tags: ["HTML", "个人网站", "自学"],
+      desc: "自学 HTML 与 Python 后陆续发布。其中「多 AI 交互系统」是本页最值得点开的作品 —— 它既可以当网站访问,也能在 GitHub 上拿到完整源码。当前这个创新班作品展示站同样是其中之一。",
+      tags: ["HTML", "个人网站", "自学", "已上线"],
       image: "",
-      link: "https://razoredge-wyh.github.io/my-site/"
+      link: "https://aimeetinguipy-buikwpsprif94b8nufhrd4.streamlit.app/"
     },
     {
-      title: "GitHub 开源项目(5 个 · 共获 9 stars)",
-      desc: "在 GitHub 上发布多个项目并获得 stars,覆盖 AI 编程技能包、AI 图像工具与 Python 后端应用。详见下方列表。",
+      title: "GitHub 开源项目(6 个 · 共获 10 stars)",
+      desc: "在 GitHub 上发布多个项目并获得 stars,覆盖多 AI 交互系统、AI 编程技能包、AI 图像工具、Godot 游戏与 Python 后端应用。详见下方列表。",
       tags: ["Open Source", "GitHub", "多个 stars"],
       image: "",
       link: "https://github.com/RazorEdge-wyh?tab=repositories"
@@ -167,6 +175,13 @@ const CONTENT = {
   /* GitHub 开源项目明细(带 star 数,数据来自 GitHub 仓库真实信息) */
   reposSub: "GitHub 上的开源项目",
   repos: [
+    {
+      name: "AImeetingPROJECT",
+      stars: 1,
+      lang: "Python",
+      desc: "基于 Python + Streamlit 的可视化多 AI 交互系统,7 种会议模式(辩论 / 阶梯式递进讨论 / 方案评审 / 头脑风暴 / 狼人杀 等),独立开发并部署上线,永久免费开源。",
+      link: "https://github.com/wyyyyy999/AImeetingPROJECT"
+    },
     {
       name: "zh-skills",
       stars: 3,
@@ -210,7 +225,7 @@ const CONTENT = {
   honors: [
     { title: "中鸣 RIC 机器人比赛 · 一等奖", meta: "省级 / 市级" },
     { title: "中鸣 RIC 机器人比赛 · 二等奖", meta: "省级 / 市级" },
-    { title: "GitHub 开源项目累计 9 stars", meta: "5 个公开项目" },
+    { title: "GitHub 开源项目累计 10 stars", meta: "6 个公开项目 · 含独立开发并上线的多 AI 交互系统" },
     { title: "湖南科技大学 2026 级新生代表", meta: "上台领取校徽" }
   ],
 
@@ -244,6 +259,8 @@ const CONTENT = {
   email: "2160634966@qq.com",
   links: [
     { label: "GitHub · RazorEdge-wyh", url: "https://github.com/RazorEdge-wyh" },
+    { label: "GitHub · wyyyyy999(AImeetingPROJECT 作者)", url: "https://github.com/wyyyyy999" },
+    { label: "多 AI 交互系统(在线体验)", url: "https://aimeetinguipy-buikwpsprif94b8nufhrd4.streamlit.app/" },
     { label: "ONE SHOT 一弹到底(源码)", url: "https://github.com/RazorEdge-wyh/one-shot-godot" },
     { label: "本展示站源码", url: "https://github.com/RazorEdge-wyh/my-site" }
   ]
