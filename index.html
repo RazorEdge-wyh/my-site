@@ -3,16 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="我的个人网站 —— 作品、经历与联系方式">
+<meta name="description" content="王越豪 · 湖南科技大学 2026 级 · 创新班选拔作品展示 —— 项目经历、作品、荣誉与户外经历">
 <meta name="theme-color" content="#0b1120">
 
 <!-- 社交分享卡片(可选,不影响显示) -->
 <meta property="og:type" content="website">
-<meta property="og:title" content="个人主页">
-<meta property="og:description" content="我的个人网站 —— 作品、经历与联系方式">
+<meta property="og:title" content="王越豪 · 作品展示">
+<meta property="og:description" content="湖南科技大学 2026 级 · 创新班选拔作品展示">
 <meta property="og:image" content="./images/avatar.jpg">
 
-<title>个人主页</title>
+<title>王越豪 · 作品展示</title>
 
 <link rel="icon" href="./images/avatar.jpg">
 <link rel="stylesheet" href="./styles.css">
@@ -34,7 +34,11 @@
     <nav class="nav__menu" id="navMenu" aria-label="主导航">
       <a href="#about">关于</a>
       <a href="#skills">技能</a>
+      <a href="#timeline">经历</a>
       <a href="#works">作品</a>
+      <a href="#repos">开源</a>
+      <a href="#honors">荣誉</a>
+      <a href="#outdoor">户外</a>
       <a href="#gallery">相册</a>
       <a href="#contact">联系</a>
       <button class="theme-btn" id="themeToggle" aria-label="切换深浅色">
@@ -112,10 +116,21 @@
     <ul class="skills" id="skills"></ul>
   </section>
 
-  <!-- 作品 -->
-  <section class="section" id="works">
+  <!-- 项目经历(时间线) -->
+  <section class="section" id="timeline">
     <div class="section__head reveal">
       <span class="section__index">03</span>
+      <h2 class="section__title">项目经历</h2>
+      <p class="section__sub" data-config="timelineSub"></p>
+    </div>
+
+    <ol class="timeline" id="timeline"></ol>
+  </section>
+
+  <!-- 作品 -->
+  <section class="section section--alt" id="works">
+    <div class="section__head reveal">
+      <span class="section__index">04</span>
       <h2 class="section__title">作品</h2>
       <p class="section__sub" data-config="worksSub"></p>
     </div>
@@ -123,10 +138,47 @@
     <div class="works" id="works"></div>
   </section>
 
+  <!-- 开源项目 -->
+  <section class="section" id="repos">
+    <div class="section__head reveal">
+      <span class="section__index">05</span>
+      <h2 class="section__title">开源项目</h2>
+      <p class="section__sub" data-config="reposSub"></p>
+    </div>
+
+    <ul class="repos" id="repos"></ul>
+    <p class="repos__more reveal">
+      <a class="btn btn--ghost" href="https://github.com/RazorEdge-wyh?tab=repositories" target="_blank" rel="noopener noreferrer">在 GitHub 上查看全部 →</a>
+    </p>
+  </section>
+
+  <!-- 荣誉 -->
+  <section class="section section--alt" id="honors">
+    <div class="section__head reveal">
+      <span class="section__index">06</span>
+      <h2 class="section__title">荣誉</h2>
+      <p class="section__sub" data-config="honorsSub"></p>
+    </div>
+
+    <ul class="honors" id="honors"></ul>
+  </section>
+
+  <!-- 户外经历 -->
+  <section class="section" id="outdoor">
+    <div class="section__head reveal">
+      <span class="section__index">07</span>
+      <h2 class="section__title">户外经历</h2>
+      <p class="section__sub" data-config="outdoorSub"></p>
+    </div>
+
+    <p class="outdoor__lead reveal" data-config="outdoorP1"></p>
+    <ul class="outdoor" id="outdoor"></ul>
+  </section>
+
   <!-- 相册 -->
   <section class="section section--alt" id="gallery">
     <div class="section__head reveal">
-      <span class="section__index">04</span>
+      <span class="section__index">08</span>
       <h2 class="section__title">相册</h2>
       <p class="section__sub" data-config="gallerySub"></p>
     </div>
@@ -137,7 +189,7 @@
   <!-- 联系 -->
   <section class="section" id="contact">
     <div class="section__head reveal">
-      <span class="section__index">05</span>
+      <span class="section__index">09</span>
       <h2 class="section__title">联系我</h2>
       <p class="section__sub" data-config="contactSub"></p>
     </div>

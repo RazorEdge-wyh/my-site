@@ -43,8 +43,13 @@
   fill('[data-config="gallerySub"]',C.gallerySub);
   fill('[data-config="contactSub"]',C.contactSub);
   fill('[data-config="contactLead"]', C.contactLead);
+  fill('[data-config="timelineSub"]', C.timelineSub);
+  fill('[data-config="reposSub"]',   C.reposSub);
+  fill('[data-config="honorsSub"]',  C.honorsSub);
+  fill('[data-config="outdoorSub"]', C.outdoorSub);
+  fill('[data-config="outdoorP1"]',  C.outdoorP1);
 
-  document.title = (C.name ? C.name + ' · ' : '') + '个人主页';
+  document.title = (C.name ? C.name + ' · ' : '') + '作品展示';
 
   /* ======================================================================
      2. 头像
@@ -180,6 +185,96 @@
     });
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape' && !lightbox.hidden) closeLightbox();
+    });
+  }
+
+  /* ======================================================================
+     7.5 项目经历(时间线)
+     ====================================================================== */
+  var timeline = $('#timeline');
+  if (timeline && C.timeline) {
+    C.timeline.filter(function (t) { return t && t.title; }).forEach(function (t) {
+      var li = el('li', 'tl reveal');
+
+      li.appendChild(el('div', 'tl__dot'));
+      if (t.period) li.appendChild(el('span', 'tl__period', t.period));
+
+      var body = el('div', 'tl__body');
+      body.appendChild(el('h3', 'tl__title', t.title));
+      if (t.desc) body.appendChild(el('p', 'tl__desc', t.desc));
+
+      if (t.tags && t.tags.length) {
+        var box = el('div', 'tl__tags');
+        t.tags.filter(Boolean).forEach(function (x) { box.appendChild(el('span', null, x)); });
+        body.appendChild(box);
+      }
+
+      li.appendChild(body);
+      timeline.appendChild(li);
+    });
+  }
+
+  /* ======================================================================
+     7.6 开源项目列表
+     ====================================================================== */
+  var repos = $('#repos');
+  if (repos && C.repos) {
+    C.repos.filter(function (r) { return r && r.name; }).forEach(function (r) {
+      var li = el('li', 'repo reveal');
+
+      var head = el('div', 'repo__head');
+      var name = el('span', 'repo__name', r.name);
+      head.appendChild(name);
+
+      if (typeof r.stars === 'number') {
+        var star = el('span', 'repo__star', '★ ' + r.stars);
+        head.appendChild(star);
+      }
+      if (r.lang) head.appendChild(el('span', 'repo__lang', r.lang));
+      li.appendChild(head);
+
+      if (r.desc) li.appendChild(el('p', 'repo__desc', r.desc));
+
+      var href = safeUrl(r.link);
+      if (href) {
+        var a = el('a', 'repo__link', '查看仓库 →');
+        a.href = href;
+        a.target = '_blank';
+        a.rel = 'noopener noreferrer';
+        li.appendChild(a);
+      }
+
+      repos.appendChild(li);
+    });
+  }
+
+  /* ======================================================================
+     7.7 荣誉
+     ====================================================================== */
+  var honors = $('#honors');
+  if (honors && C.honors) {
+    C.honors.filter(function (h) { return h && h.title; }).forEach(function (h) {
+      var li = el('li', 'honor reveal');
+      var body = el('div', 'honor__body');
+      body.appendChild(el('span', 'honor__title', h.title));
+      if (h.meta) body.appendChild(el('span', 'honor__meta', h.meta));
+      li.appendChild(el('span', 'honor__medal', '🏅'));
+      li.appendChild(body);
+      honors.appendChild(li);
+    });
+  }
+
+  /* ======================================================================
+     7.8 户外经历
+     ====================================================================== */
+  var outdoor = $('#outdoor');
+  if (outdoor && C.outdoor) {
+    C.outdoor.filter(function (o) { return o && o.title; }).forEach(function (o) {
+      var li = el('li', 'out reveal');
+      li.appendChild(el('span', 'out__icon', o.icon || '•'));
+      li.appendChild(el('h3', 'out__title', o.title));
+      if (o.desc) li.appendChild(el('p', 'out__desc', o.desc));
+      outdoor.appendChild(li);
     });
   }
 

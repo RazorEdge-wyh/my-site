@@ -388,6 +388,131 @@ svg{ width:1em; height:1em; fill:none; stroke:currentColor; stroke-width:1.9; }
 }
 .shot:hover figcaption{ opacity:1; transform:none; }
 
+/* ==========================================================================
+   项目经历 · 时间线
+   ========================================================================== */
+.timeline{ position:relative; padding-left:30px; }
+.timeline::before{
+  content:""; position:absolute; left:7px; top:8px; bottom:8px;
+  width:2px; border-radius:2px;
+  background:linear-gradient(180deg, var(--accent), var(--accent-2), transparent);
+  opacity:.55;
+}
+.tl{ position:relative; padding:0 0 34px 0; }
+.tl:last-child{ padding-bottom:0; }
+.tl__dot{
+  position:absolute; left:-30px; top:7px;
+  width:16px; height:16px; border-radius:50%;
+  background:var(--bg); border:2px solid var(--accent);
+  box-shadow:0 0 0 4px color-mix(in srgb, var(--accent) 16%, transparent);
+}
+.tl__period{
+  display:inline-block; margin-bottom:7px;
+  padding:2px 11px; border-radius:99px;
+  border:1px solid var(--border-hi); background:var(--surface-2);
+  font-size:.74rem; font-weight:600; letter-spacing:.02em; color:var(--accent);
+}
+.tl__body{
+  border:1px solid var(--border); border-radius:var(--radius);
+  background:var(--surface); padding:20px 24px 22px;
+  transition:transform .35s var(--ease), border-color .35s, box-shadow .35s;
+}
+.tl:hover .tl__body{
+  transform:translateX(4px);
+  border-color:var(--border-hi);
+  box-shadow:var(--shadow);
+}
+.tl__title{ font-size:1.05rem; font-weight:640; letter-spacing:-.015em; margin-bottom:7px; }
+.tl__desc{ font-size:.9rem; color:var(--text-mid); }
+.tl__tags{ display:flex; flex-wrap:wrap; gap:7px; margin-top:14px; }
+.tl__tags span{
+  padding:3px 11px; border-radius:99px;
+  border:1px solid var(--border); background:var(--surface-2);
+  font-size:.74rem; color:var(--text-mid);
+}
+
+/* ==========================================================================
+   开源项目列表
+   ========================================================================== */
+.repos{ display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:18px; }
+.repo{
+  display:flex; flex-direction:column;
+  border:1px solid var(--border); border-radius:var(--radius);
+  background:var(--surface); padding:20px 22px 22px;
+  transition:transform .35s var(--ease), border-color .35s, box-shadow .35s;
+}
+.repo:hover{
+  transform:translateY(-5px);
+  border-color:var(--border-hi);
+  box-shadow:var(--shadow);
+}
+.repo__head{ display:flex; align-items:center; flex-wrap:wrap; gap:9px; margin-bottom:10px; }
+.repo__name{ font-size:1rem; font-weight:660; letter-spacing:-.01em; color:var(--accent); }
+.repo__star{
+  padding:2px 9px; border-radius:99px;
+  border:1px solid color-mix(in srgb, #fbbf24 45%, transparent);
+  background:color-mix(in srgb, #fbbf24 14%, transparent);
+  color:#fbbf24; font-size:.76rem; font-weight:640;
+  font-variant-numeric:tabular-nums;
+}
+.repo__lang{
+  padding:2px 9px; border-radius:99px;
+  border:1px solid var(--border); background:var(--surface-2);
+  font-size:.73rem; color:var(--text-dim);
+}
+.repo__desc{ font-size:.875rem; color:var(--text-mid); flex:1; margin-bottom:14px; }
+.repo__link{
+  align-self:flex-start;
+  font-size:.86rem; font-weight:560; color:var(--accent);
+  transition:transform .25s var(--ease);
+}
+.repo__link:hover{ transform:translateX(3px); }
+.repos__more{ margin-top:28px; }
+
+/* ==========================================================================
+   荣誉
+   ========================================================================== */
+.honors{ display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:14px; }
+.honor{
+  display:flex; align-items:flex-start; gap:14px;
+  border:1px solid var(--border); border-radius:var(--radius);
+  background:var(--surface); padding:18px 20px;
+  transition:transform .35s var(--ease), border-color .35s;
+}
+.honor:hover{ transform:translateY(-4px); border-color:var(--border-hi); }
+.honor__medal{ font-size:1.3rem; line-height:1.3; }
+.honor__body{ display:flex; flex-direction:column; gap:3px; }
+.honor__title{ font-size:.95rem; font-weight:600; }
+.honor__meta{ font-size:.78rem; color:var(--text-dim); }
+
+/* ==========================================================================
+   户外经历
+   ========================================================================== */
+.outdoor__lead{
+  color:var(--text-mid); max-width:70ch;
+  margin:-28px auto 40px; font-size:.95rem;
+}
+.outdoor{ display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:18px; }
+.out{
+  border:1px solid var(--border); border-radius:var(--radius);
+  background:var(--surface); padding:22px 22px 24px;
+  transition:transform .35s var(--ease), border-color .35s, box-shadow .35s;
+}
+.out:hover{
+  transform:translateY(-5px);
+  border-color:var(--border-hi);
+  box-shadow:var(--shadow);
+}
+.out__icon{ display:block; font-size:1.6rem; margin-bottom:10px; }
+.out__title{ font-size:1rem; font-weight:620; margin-bottom:7px; letter-spacing:-.01em; }
+.out__desc{ font-size:.86rem; color:var(--text-mid); }
+
+/* 导航项变多,窄屏时缩小间距 */
+@media (max-width:900px){
+  .nav__menu{ gap:14px; }
+  .nav__menu a{ font-size:.84rem; }
+}
+
 /* 灯箱 */
 .lightbox{
   position:fixed; inset:0; z-index:200;
