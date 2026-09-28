@@ -14,7 +14,7 @@ const CONTENT = {
   role: "湖南科技大学 2026 级 · 创新班选拔申请人",
   tagline: "从小学的机器人赛道,到 Transformer 论文与独立游戏 —— 我一直在把想法做成能跑起来的东西。",
 
-  avatar: "./images/avatar.jpg",
+  avatar: "./images/newcomer-rep.jpg",
 
   /* 首屏小标签 */
   meta: [
@@ -123,42 +123,42 @@ const CONTENT = {
       title: "独立游戏《WaitingForDawn》",
       desc: "个人独立游戏,目前开发中。从玩法设计到代码实现全部独立完成,正在持续迭代。",
       tags: ["独立游戏", "开发中", "独立完成"],
-      image: "./images/work-1.jpg",
+      image: "",
       link: ""
     },
     {
       title: "Godot 3 引擎 · 初级小游戏",
       desc: "中学阶段用 C 语言在 Godot 3 引擎中完成的小游戏,是我第一个完整的游戏项目。",
       tags: ["Godot 3", "C 语言", "游戏开发"],
-      image: "./images/work-2.jpg",
+      image: "",
       link: ""
     },
     {
       title: "Arduino 超声波雷达",
       desc: "自学 Arduino,参照开源教程加装超声波传感器,独立完成一个简易雷达(测距 + 扫描显示)。",
       tags: ["Arduino", "HC-SR04", "开源教程", "硬件"],
-      image: "./images/work-3.jpg",
+      image: "./images/zhongming-robot.jpg",
       link: "https://docs.arduino.cc/built-in-examples/sensors/Ping/"
     },
     {
       title: "RobotMaster 机甲大师 · 无人机改造",
       desc: "在中学 RobotMaster 机甲大师社团负责无人机的改造工作,涉及硬件调整与调试。",
       tags: ["RoboMaster", "无人机", "硬件改造"],
-      image: "./images/photo-1.jpg",
+      image: "",
       link: ""
     },
     {
       title: "个人网站(三个)",
       desc: "自学 HTML 后陆续发布的个人网站,当前这个创新班作品展示站也是其中之一。",
       tags: ["HTML", "个人网站", "自学"],
-      image: "./images/photo-2.jpg",
+      image: "",
       link: "https://razoredge-wyh.github.io/my-site/"
     },
     {
       title: "GitHub 开源项目(5 个 · 共获 9 stars)",
       desc: "在 GitHub 上发布多个项目并获得 stars,覆盖 AI 编程技能包、AI 图像工具与 Python 后端应用。详见下方列表。",
       tags: ["Open Source", "GitHub", "多个 stars"],
-      image: "./images/photo-1.jpg",
+      image: "",
       link: "https://github.com/RazorEdge-wyh?tab=repositories"
     }
   ],
@@ -229,10 +229,11 @@ const CONTENT = {
   /* 换成自己的照片:把文件放进 images 文件夹覆盖同名文件即可,无需改代码。 */
   gallerySub: "一些现场照片",
   gallery: [
-    { src: "./images/photo-1.jpg", caption: "雪山 / 户外" },
-    { src: "./images/photo-2.jpg", caption: "机器人比赛现场" },
-    { src: "./images/photo-3.jpg", caption: "机甲大师社团" },
-    { src: "./images/photo-4.jpg", caption: "开发日常" }
+    { src: "./images/wukuchu-climb.jpg",     caption: "乌库楚 · 冰川攀登" },
+    { src: "./images/trek.jpg",              caption: "重装徒步" },
+    { src: "./images/newcomer-rep.jpg",      caption: "2026 级 · 佩戴校徽仪式" },
+    { src: "./images/newcomer-training.jpg", caption: "新生代表训练" },
+    { src: "./images/zhongming-robot.jpg",   caption: "中鸣机器人比赛现场" }
   ],
 
 

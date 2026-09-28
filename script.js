@@ -55,7 +55,15 @@
      2. 头像
      ====================================================================== */
   var avatar = $('#heroAvatar');
-  if (avatar && C.avatar) avatar.src = C.avatar;
+  if (avatar && C.avatar) {
+    avatar.src = C.avatar;
+  }
+  /* 没有头像文件时不显示破图框 */
+  var frame = avatar && avatar.closest ? avatar.closest('.photo-frame') : null;
+  if (!C.avatar && frame) {
+    var host = frame.parentElement;
+    if (host) host.style.display = 'none';
+  }
 
   /* ======================================================================
      3. 首屏小标签
@@ -115,6 +123,10 @@
         img.alt = w.title;
         img.loading = 'lazy';
         img.decoding = 'async';
+        /* 配图还没准备好时,隐藏图片框,卡片自动变成纯文字卡 */
+        img.addEventListener('error', function () {
+          if (thumb.parentNode) thumb.parentNode.removeChild(thumb);
+        });
         thumb.appendChild(img);
         card.appendChild(thumb);
       }
