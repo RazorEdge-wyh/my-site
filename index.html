@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="我的个人网站 —— 作品、经历与联系方式">
+<meta name="theme-color" content="#0b1120">
+
+<!-- 社交分享卡片(可选,不影响显示) -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="个人主页">
+<meta property="og:description" content="我的个人网站 —— 作品、经历与联系方式">
+<meta property="og:image" content="./images/avatar.jpg">
+
+<title>个人主页</title>
+
+<link rel="icon" href="./images/avatar.jpg">
+<link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+<!-- 顶部导航 -->
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a class="nav__brand" href="#top">
+      <span class="nav__dot" aria-hidden="true"></span>
+      <span data-config="name">你的名字</span>
+    </a>
+
+    <button class="nav__toggle" id="navToggle" aria-label="打开菜单" aria-expanded="false" aria-controls="navMenu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav__menu" id="navMenu" aria-label="主导航">
+      <a href="#about">关于</a>
+      <a href="#skills">技能</a>
+      <a href="#works">作品</a>
+      <a href="#gallery">相册</a>
+      <a href="#contact">联系</a>
+      <button class="theme-btn" id="themeToggle" aria-label="切换深浅色">
+        <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><g stroke-linecap="round"><path d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4M5.2 5.2l1.7 1.7M17.1 17.1l1.7 1.7M18.8 5.2l-1.7 1.7M6.9 17.1l-1.7 1.7"/></g></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></svg>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- 首屏 -->
+  <section class="hero">
+    <div class="hero__glow" aria-hidden="true"></div>
+
+    <div class="hero__inner">
+      <div class="hero__text reveal">
+        <p class="hero__eyebrow" data-config="greeting">你好,很高兴认识你 👋</p>
+
+        <h1 class="hero__title">
+          <span data-config="name">你的名字</span>
+        </h1>
+
+        <p class="hero__role" data-config="role">你的职业 / 身份</p>
+        <p class="hero__tagline" data-config="tagline">这里是你的主页</p>
+
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#works">看看我的作品</a>
+          <a class="btn btn--ghost" href="#contact">联系我</a>
+        </div>
+
+        <ul class="hero__meta" id="heroMeta"></ul>
+      </div>
+
+      <div class="hero__photo reveal" data-delay="120">
+        <div class="photo-frame">
+          <img id="heroAvatar" class="photo-frame__img" src="./images/avatar.jpg" alt="个人照片" width="800" height="800">
+        </div>
+        <div class="photo-frame__ring" aria-hidden="true"></div>
+      </div>
+    </div>
+
+    <a class="hero__scroll" href="#about" aria-label="向下滚动">
+      <span></span>
+    </a>
+  </section>
+
+  <!-- 关于 -->
+  <section class="section" id="about">
+    <div class="section__head reveal">
+      <span class="section__index">01</span>
+      <h2 class="section__title">关于我</h2>
+      <p class="section__sub" data-config="aboutSub"></p>
+    </div>
+
+    <div class="about">
+      <div class="about__body reveal">
+        <p data-config="aboutP1"></p>
+        <p data-config="aboutP2"></p>
+      </div>
+
+      <dl class="about__facts" id="aboutFacts"></dl>
+    </div>
+  </section>
+
+  <!-- 技能 -->
+  <section class="section section--alt" id="skills">
+    <div class="section__head reveal">
+      <span class="section__index">02</span>
+      <h2 class="section__title">技能</h2>
+      <p class="section__sub" data-config="skillsSub"></p>
+    </div>
+
+    <ul class="skills" id="skills"></ul>
+  </section>
+
+  <!-- 作品 -->
+  <section class="section" id="works">
+    <div class="section__head reveal">
+      <span class="section__index">03</span>
+      <h2 class="section__title">作品</h2>
+      <p class="section__sub" data-config="worksSub"></p>
+    </div>
+
+    <div class="works" id="works"></div>
+  </section>
+
+  <!-- 相册 -->
+  <section class="section section--alt" id="gallery">
+    <div class="section__head reveal">
+      <span class="section__index">04</span>
+      <h2 class="section__title">相册</h2>
+      <p class="section__sub" data-config="gallerySub"></p>
+    </div>
+
+    <div class="gallery" id="gallery"></div>
+  </section>
+
+  <!-- 联系 -->
+  <section class="section" id="contact">
+    <div class="section__head reveal">
+      <span class="section__index">05</span>
+      <h2 class="section__title">联系我</h2>
+      <p class="section__sub" data-config="contactSub"></p>
+    </div>
+
+    <div class="contact reveal">
+      <p class="contact__lead" data-config="contactLead"></p>
+      <a class="btn btn--primary btn--lg" id="contactMail" href="#">给我发邮件</a>
+      <ul class="contact__links" id="contactLinks"></ul>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>
+    © <span id="year"></span>
+    <span data-config="name">你的名字</span>
+    · 由 <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> 托管
+  </p>
+</footer>
+
+<!-- 图片灯箱 -->
+<div class="lightbox" id="lightbox" hidden>
+  <button class="lightbox__close" id="lightboxClose" aria-label="关闭">×</button>
+  <img id="lightboxImg" src="" alt="">
+</div>
+
+<script src="./content.js"></script>
+<script src="./script.js"></script>
+</body>
+</html>
