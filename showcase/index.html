@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="王越豪 · 湖南科技大学 2026 级 · 创新班选拔作品展示 —— 项目经历、作品、荣誉与户外经历">
+<meta name="theme-color" content="#fdfdfc">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="王越豪 · 创新班选拔作品展示">
+<meta property="og:description" content="湖南科技大学 2026 级 · 创新班选拔作品展示">
+<meta property="og:image" content="./images/newcomer-rep.jpg">
+
+<title>王越豪 · 创新班选拔作品展示</title>
+
+<link rel="icon" href="./images/newcomer-rep.jpg">
+<link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+<header class="head" id="head">
+  <div class="head__in">
+    <a class="head__name" href="#top" data-config="name">王越豪</a>
+    <nav class="head__nav" id="nav" aria-label="主导航"></nav>
+    <button class="theme-btn" id="themeBtn" aria-label="切换深浅色" title="切换深浅色">◐</button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- 首屏:文字为主,照片只做一个小头像 -->
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow" data-config="eyebrow"></p>
+
+      <div class="hero__id">
+        <figure class="hero__photo">
+          <img id="avatar" src="./images/newcomer-rep.jpg" alt="王越豪" width="160" height="160">
+        </figure>
+        <div>
+          <h1><span data-config="name">王越豪</span><span class="hero__en" data-config="nameEn">RazorEdge</span></h1>
+          <p class="hero__cap" data-config="avatarCaption"></p>
+        </div>
+      </div>
+
+      <p class="hero__tag">学号 <span data-config="studentId"></span> · <span data-config="tagline"></span></p>
+      <p class="hero__intro" data-config="intro"></p>
+      <ul class="facts" id="facts"></ul>
+    </div>
+  </section>
+
+  <div class="wrap">
+
+    <section class="sec" id="about">
+      <div class="sec__h"><span class="sec__n">01</span><h2 class="sec__t">个人介绍</h2><span class="sec__s" data-config="aboutSub"></span></div>
+      <div id="aboutBody"></div>
+    </section>
+
+    <section class="sec" id="traits">
+      <div class="sec__h"><span class="sec__n">02</span><h2 class="sec__t">自我评价</h2><span class="sec__s" data-config="traitsSub"></span></div>
+      <div id="traitsBody"></div>
+    </section>
+
+    <section class="sec" id="skills">
+      <div class="sec__h"><span class="sec__n">03</span><h2 class="sec__t">技能</h2><span class="sec__s" data-config="skillsSub"></span></div>
+      <ul class="skills" id="skills"></ul>
+    </section>
+
+    <section class="sec" id="timeline">
+      <div class="sec__h"><span class="sec__n">04</span><h2 class="sec__t">项目经历</h2><span class="sec__s" data-config="timelineSub"></span></div>
+      <ol class="timeline" id="timeline"></ol>
+    </section>
+
+    <section class="sec" id="works">
+      <div class="sec__h"><span class="sec__n">05</span><h2 class="sec__t">作品</h2><span class="sec__s" data-config="worksSub"></span></div>
+      <ul class="works" id="works"></ul>
+    </section>
+
+    <section class="sec" id="repos">
+      <div class="sec__h"><span class="sec__n">06</span><h2 class="sec__t">开源项目</h2><span class="sec__s" data-config="reposSub"></span></div>
+      <p class="sec__lead" data-config="reposNote"></p>
+      <ul class="repos" id="repos"></ul>
+    </section>
+
+    <section class="sec" id="honors">
+      <div class="sec__h"><span class="sec__n">07</span><h2 class="sec__t">荣誉</h2><span class="sec__s" data-config="honorsSub"></span></div>
+      <div id="honorsBody"></div>
+    </section>
+
+    <section class="sec" id="outdoor">
+      <div class="sec__h"><span class="sec__n">08</span><h2 class="sec__t">户外经历</h2><span class="sec__s" data-config="outdoorSub"></span></div>
+      <p class="sec__lead" data-config="outdoorP1"></p>
+      <div id="outdoorBody"></div>
+    </section>
+
+    <section class="sec" id="gallery">
+      <div class="sec__h"><span class="sec__n">09</span><h2 class="sec__t">相册</h2><span class="sec__s" data-config="gallerySub"></span></div>
+      <div class="gallery" id="gallery"></div>
+    </section>
+
+    <section class="sec" id="contact">
+      <div class="sec__h"><span class="sec__n">10</span><h2 class="sec__t">联系方式</h2><span class="sec__s" data-config="contactSub"></span></div>
+      <p class="sec__lead" data-config="contactLead"></p>
+      <div class="row"><span class="row__k">邮箱</span><div class="row__v"><a id="mail" href="#"></a></div></div>
+      <div class="row" id="phoneRow"><span class="row__k">手机</span><div class="row__v"><a id="phone" href="#"></a></div></div>
+      <ul class="links" id="links"></ul>
+    </section>
+
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="foot__in">
+    <span>© <span id="year"></span> <span data-config="name">王越豪</span></span>
+    <span>由 GitHub Pages 托管 · <a href="https://github.com/RazorEdge-wyh" target="_blank" rel="noopener noreferrer">RazorEdge-wyh</a></span>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox" hidden>
+  <button class="lightbox__x" id="lightboxX" aria-label="关闭">×</button>
+  <img id="lightboxImg" src="" alt="">
+</div>
+
+<script src="./content.js"></script>
+<script src="./render.js"></script>
+</body>
+</html>
