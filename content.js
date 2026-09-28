@@ -35,6 +35,7 @@ const CONTENT = {
     { label: "年级", value: "2026 级" },
     { label: "方向兴趣", value: "人工智能 / 游戏开发 / 嵌入式与机器人" },
     { label: "开发工具", value: "ClaudeCode · Codex · DeepSeekHarness" },
+    { label: "邮箱", value: "2160634966@qq.com" },
     { label: "语言", value: "中文 / English" },
     { label: "户外", value: "5000m+ 技术型雪山 · 攀冰 · 百公里骑行" }
   ],
@@ -73,9 +74,9 @@ const CONTENT = {
     },
     {
       period: "中学 · 开发",
-      title: "Godot 3 引擎的第一个小游戏",
-      desc: "用 C 语言配合 Godot 3 引擎完成了一个初级小游戏,完整走了一遍从想法、写代码到能玩的过程。",
-      tags: ["Godot 3", "C", "游戏开发"]
+      title: "Godot 引擎的第一个小游戏",
+      desc: "用 C 语言配合 Godot 引擎完成了一个初级小游戏,完整走了一遍从想法、写代码到能玩的过程。这个方向一直延续到现在 —— 后来的 ONE SHOT 一弹到底就是它长大之后的样子。",
+      tags: ["Godot", "C", "游戏开发"]
     },
     {
       period: "中学 · 自学",
@@ -127,11 +128,11 @@ const CONTENT = {
       link: ""
     },
     {
-      title: "Godot 3 引擎 · 初级小游戏",
-      desc: "中学阶段用 C 语言在 Godot 3 引擎中完成的小游戏,是我第一个完整的游戏项目。",
-      tags: ["Godot 3", "C 语言", "游戏开发"],
-      image: "",
-      link: ""
+      title: "ONE SHOT 一弹到底 · 3D 弹球解谜",
+      desc: "整个关卡只有一发子弹。每次撞墙子弹会换色,只有颜色相同的目标才能击碎,把场上目标清空才算过关。Godot 4.6 + GDScript,含 3D 物理弹道、自定义着色器与多关卡设计。这也是我 Godot 系列作品的延续。",
+      tags: ["Godot 4.6", "GDScript", "3D", "开源"],
+      image: "./images/game-4.png",
+      link: "https://github.com/RazorEdge-wyh/one-shot-godot"
     },
     {
       title: "Arduino 超声波雷达",
@@ -240,10 +241,10 @@ const CONTENT = {
   /* ---------- 9. 联系方式 ---------- */
   contactSub: "欢迎交流与指正",
   contactLead: "如果你想了解某个项目的细节,或者想聊聊 AI、游戏开发、机器人,都欢迎联系我。",
-  email: "",
+  email: "2160634966@qq.com",
   links: [
     { label: "GitHub · RazorEdge-wyh", url: "https://github.com/RazorEdge-wyh" },
-    { label: "本展示站源码", url: "https://github.com/RazorEdge-wyh/my-site" },
-    { label: "邮箱 / 微信", url: "" }
+    { label: "ONE SHOT 一弹到底(源码)", url: "https://github.com/RazorEdge-wyh/one-shot-godot" },
+    { label: "本展示站源码", url: "https://github.com/RazorEdge-wyh/my-site" }
   ]
 };
