@@ -1,0 +1,14 @@
+# 操作系统
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 编辑器
+.vscode/
+.idea/
+*.swp
+
+# 部署脚本与临时产物（源仓库产物，不随站点发布）
+deploy.ps1
+deploy-*.log
+*.tmp
